@@ -3,7 +3,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.king</groupId>
+		<groupId>com.ty</groupId>
 		<artifactId>spring-cloud-demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -44,5 +44,11 @@
 	</dependencies>
 	<build>
 		<finalName>spring-cloud-enreka-client</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 </project>
