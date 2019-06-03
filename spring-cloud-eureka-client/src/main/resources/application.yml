@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+spring:
+  application:
+    name: spring-cloud-eureka-client
+  zipkin:
+    base-url: http://localhost:8091
+    sleuth:
+      sampler:
+        percentage: 1.0
+
+info:
+  app:
+    name: "服务调用"
+    description: "@project.description@"
+    version: "@project.version@"
+    spring-boot-version: "@project.parent.version@"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  #SpringBootActuator监控暴露所有接口

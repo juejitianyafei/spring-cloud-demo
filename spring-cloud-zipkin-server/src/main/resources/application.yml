@@ -1,0 +1,29 @@
+server:
+  port: 8089
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: spring-cloud-zipkin-server
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/zipkin?characterEncoding=utf8&useSSL=true&serverTimezone=Hongkong
+    username: root
+    password: root
+  sleuth:
+    enabled: false
+zipkin:
+  storage:
+    type: mysql
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
