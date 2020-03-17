@@ -34,7 +34,7 @@ public class EurekaClientApplication {
     }
 
     @GetMapping
-    public String configTest(){
+    public String configTest() {
         return test;
     }
 }

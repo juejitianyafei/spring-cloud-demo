@@ -1,7 +1,9 @@
 package com.king.controller;
 
 import com.king.service.FeignHelloService;
+
 import javax.annotation.Resource;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

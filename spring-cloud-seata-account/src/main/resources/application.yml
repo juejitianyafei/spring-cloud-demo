@@ -1,0 +1,34 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/account_db?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.king.seata.account.model
+  mapper-locations: classpath:mappers/*.xml
+logging:
+  level:
+    io:
+      seata: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  #SpringBootActuator监控暴露所有接口

@@ -13,4 +13,5 @@ public class FeignHelloServiceHystric implements FeignHelloService {
     public String hi(String username) {
         return "Feign调用失败";
     }
+
 }
