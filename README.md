@@ -9,3 +9,5 @@
 | spring-boot-admin | 8087 | spring boot admin |
 | spring-cloud-hystrix-dashboard | 8088 | 熔断监控 |
 | spring-cloud-zipkin-server | 8089 | 调用链路追踪集成MySQL |
+| alibab seata分布式事务 |  |  |
+
