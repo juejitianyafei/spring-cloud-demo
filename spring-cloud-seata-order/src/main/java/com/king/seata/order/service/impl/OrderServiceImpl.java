@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * 订单业务实现类
  * Created by macro on 2019/11/11.
@@ -18,7 +20,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
+    @Resource
     private OrderDao orderDao;
     @Autowired
     private StorageService storageService;
@@ -31,6 +33,7 @@ public class OrderServiceImpl implements OrderService {
     @GlobalTransactional(name = "create_order_trans",rollbackFor = Exception.class)
     public void create(Order order) {
         log.info("------->下单开始");
+
         //本应用创建订单
         orderDao.create(order);
 
@@ -48,7 +51,7 @@ public class OrderServiceImpl implements OrderService {
         log.info("------->order-service中修改订单状态开始");
         orderDao.update(order.getUserId(),0);
         log.info("------->order-service中修改订单状态结束");
-        int vars = 10/0;
+
         log.info("------->下单结束");
     }
 }

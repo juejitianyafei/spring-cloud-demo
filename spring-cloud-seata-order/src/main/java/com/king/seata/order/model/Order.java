@@ -10,12 +10,13 @@ public class Order {
 
     private Long id;
 
+    /** 账户id */
     private Long userId;
-
+    /** 产品 */
     private Long productId;
-
+    /** 数量 */
     private Integer count;
-
+    /** 金额 */
     private BigDecimal money;
 
     /**
